@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="svg3004" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="1052.4" width="744.09" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata3050">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <desc id="desc3006">/Users/aysylu/Documents/designs/drawing.dxf - scale = 1.000000</desc>
+ <defs id="defs3008"></defs>
+ <g id="g3024" stroke="#000" fill="none">
+  <path id="path3026" d="M370,780.36c0-6,124-132,10-286"/>
+  <path id="path3028" d="M380,494.36c-114-154-86-390-86-390"/>
+  <path id="path3030" d="M374,774.36"/>
+  <path id="path3032" d="M208,104.36c18,676,18,674,18,674"/>
+  <path id="path3034" d="M294,104.36"/>
+  <path id="path3036" d="M370.17,779.77c-144.25,0-144.25,0.36-144.25,0.36"/>
+  <path id="path3038" d="M226,778.36"/>
+  <path id="path3040" d="M225.57,774.82c0.35,5.31,0.35,5.31,0.35,5.31"/>
+  <path id="path3042" d="M294.16,104.66h-86.27"/>
+  <path id="path3044" d="M225.92,780.13"/>
+  <path id="path3046" d="M207.89,104.66"/>
+ </g>
+</svg>
