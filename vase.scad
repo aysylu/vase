@@ -2,22 +2,23 @@
 module cup(i,o) {
         render() difference() {
                 sphere(r=o, $fn=100);
-                sphere(r=i, $fn=100);
+                scale([1, 1, 0.5])
+                        sphere(r=i, $fn=100);
                 translate([-o, -o, 0])
                         cube([2*o,2*o,o]);
         }
 }
 
 module scallops(cnt,t,r,tilt) {
-translate(t+[0,0,0])
-        for (i=[1:cnt]) {
-                //rotate([16/70*90,0,360/cnt*i])
-                rotate([0,0,360/cnt*i])
-                        scale([1,1,2])
-                        translate([r,0,0])
-                        rotate([0, tilt, 0])
-                        cup(30, 42);
-        }
+        translate(t+[0,0,0])
+                for (i=[1:cnt]) {
+                        //rotate([16/70*90,0,360/cnt*i])
+                        rotate([0,0,360/cnt*i])
+                                scale([1,1,2])
+                                translate([r,0,0])
+                                rotate([0, tilt, 0])
+                                cup(30, 42);
+                }
 }
 
 module vase() {
@@ -32,7 +33,6 @@ module vase() {
 //rotate([0,0,1/9*360])
 
 module pretty_vase() {
-    minkowski() {
         union() {
                 mirror([0,0,1]) translate([0,0,-340]) vase();
                 scallops(10, [0,0,122], 180, 25);
@@ -40,10 +40,9 @@ module pretty_vase() {
                 scallops(10, [0,0,322], 185, 25);
         }
         sphere(r=5, $fn=100);
-    }
 }
 
 difference() {
         pretty_vase();
-        translate([0,0,15]) cylinder(r1=50, r2=50, h=700);
+        translate([0,0,22]) cylinder(r1=60, r2=60, h=700);
 }
