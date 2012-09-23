@@ -13,12 +13,21 @@ module cup(i,o) {
         }
 }
 
-module scallops(cnt,t,r,tilt) {
+/*
+ * defines the ring of scallops
+ * cnt = number of the scallops in the ring
+ * t = translate the scallops along x,y,z axis
+ * r = radius of the ring
+ * tilt = tilt of the scallops along y axis in degrees
+ * twist = twist of the rings in degrees
+ */
+module scallops(cnt,t,r,tilt,twist) {
         translate(t+[0,0,0])
                 for (i=[1:cnt]) {
                         //rotate([16/70*90,0,360/cnt*i])
                         rotate([0,0,360/cnt*i])
                                 scale([1,1,2])
+                                rotate(twist)
                                 translate([r,0,0])
                                 rotate([0, tilt, 0])
                                 cup(30, 42);
@@ -46,9 +55,9 @@ module vase() {
 module pretty_vase() {
         union() {
                 mirror([0,0,1]) translate([0,0,-340]) vase();
-                scallops(10, [0,0,122], 180, 25);
-                scallops(10, [0,0,222], 195, 25);
-                scallops(10, [0,0,322], 185, 25);
+                scallops(10, [0,0,122], 180, 25, 0);
+                scallops(10, [0,0,222], 195, 25, 45);
+                scallops(10, [0,0,322], 185, 25, 90);
         }
         sphere(r=5, $fn=100);
 }
